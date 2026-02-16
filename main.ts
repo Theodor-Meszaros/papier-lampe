@@ -24,7 +24,7 @@ function licht_anmachen () {
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 120)
     basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 130)
-    basic.pause(50)
+    basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 140)
     basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 150)
@@ -32,13 +32,13 @@ function licht_anmachen () {
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 160)
     basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 170)
-    basic.pause(100)
+    basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 180)
-    basic.pause(100)
+    basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 190)
-    basic.pause(100)
+    basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 200)
-    basic.pause(100)
+    basic.pause(10)
     basic.setLedColors(0xff0000, 0xff0000, 0xff0000, 225)
 }
 let abweichung = 0
@@ -55,6 +55,6 @@ basic.forever(function () {
     if (abweichung > schnellwert) {
         licht_anmachen()
     } else {
-        basic.setLedColor(0x0000ff)
+        basic.turnRgbLedOff()
     }
 })
